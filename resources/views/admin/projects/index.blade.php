@@ -3,7 +3,6 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        @dump($projects)
         <table class="table table-dark table-striped table-hover">
             <thead>
                 <tr class="">
