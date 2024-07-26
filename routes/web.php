@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\admin\HomeController as AdminHomeController;
+use App\Http\Controllers\Admin\ProjectController as AdminPostController;
 use App\Http\Controllers\HomeController as GuestHomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,7 +27,7 @@ Route::get('/home', [GuestHomeController::class, 'index'])->name('home');
 route::middleware("auth")->name("admin.")->prefix("admin/")->group(
     function(){
         Route::get("home", [AdminHomeController::class, "index"])->name("home")->middleware("auth");
-        Route::resource("user", AdminHomeController::class);
+        Route::resource("/projects", AdminPostController::class);
     }
 );
 
