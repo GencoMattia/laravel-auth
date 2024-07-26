@@ -26,7 +26,7 @@
                         <td>{{ $project->author }}</td>
                         <td>{{ $project->creation_date }}</td>
                         <td>
-                            <a href="" class="btn btn-primary btn-sm">
+                            <a href="{{ route("admin.projects.show", $project) }}" class="btn btn-primary btn-sm">
                                 Show
                             </a>
                         </td>
