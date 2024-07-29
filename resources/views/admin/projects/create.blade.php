@@ -1,7 +1,7 @@
 @extends("admin.projects.layouts.create-or-edit-form")
 
 @section("form-action")
-    {{ route("admin.projects.create") }}
+    {{ route("admin.projects.store") }}
 @endsection
 
 @section("form-method")

@@ -27,8 +27,9 @@ class ProjectController extends Controller
     public function create()
     {
         //
+        $project = new Project();
 
-        return view("admin.projects.create");
+        return view("admin.projects.create", compact("project"));
     }
 
     /**
@@ -59,9 +60,11 @@ class ProjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Project $project)
     {
         //
+
+        return view("admin.projects.edit", compact("project"));
     }
 
     /**
