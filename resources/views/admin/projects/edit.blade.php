@@ -5,7 +5,7 @@
 @endsection
 
 @section("form-method")
-    @method("POST")
+    "POST"
 @endsection
 
 @section("create-form-button")
