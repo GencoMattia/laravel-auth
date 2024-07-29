@@ -31,7 +31,7 @@
                             <a href="{{ route("admin.projects.edit", $project) }}" class="btn btn-success btn-sm">
                                 Edit
                             </a>
-                            <form action="{{ route("admin.projects.destroy", $project) }}" method="post" class="d-inline-block">
+                            <form action="{{ route("admin.projects.destroy", $project) }}" method="post" class="d-inline-block form-destroyer" data-project-name="{{ $project->title }}">
                                 @method("delete")
                                 @csrf
                                 <input type="submit" class="btn btn-danger btn-sm" value="Delete"/>
@@ -43,4 +43,8 @@
         </table>
     </div>
 </div>
+@endsection
+
+@section("additional-scripts")
+    @vite(["reources/js/projects/delete-index-confirmation.js"])
 @endsection
