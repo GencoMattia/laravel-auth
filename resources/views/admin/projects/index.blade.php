@@ -46,5 +46,5 @@
 @endsection
 
 @section("additional-scripts")
-    @vite(["reources/js/projects/delete-index-confirmation.js"])
+    @vite(["resources/js/projects/delete-index-confirmation.js"])
 @endsection
